@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-background: #F3F5FC;
+    --color-primary: #0A3871;
+    --color-primary-hover: #1056aa;
+    --color-secondary: #D9DFE8;
+    --color-text: #343a40;
+    --color-text-muted: #495057;
+    --color-border: #0A3871;
+    --color-placeholder: #0A3871;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+}
+
+
+.header-logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
+}
+
+main{
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 180px;
+    margin-bottom: 0; 
+}
+
+.text-input-section{
+background-color: white;
+border-radius: 24px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px; 
+ padding: 10px; 
+}
+
+.input-text-area{
+    border-radius: 24px;
+    min-height: 400px; 
+    border: none;
+    color: var(--color-primary);
+    margin-top: 0px;
+    padding: 2px;
+    text-transform: lowercase;
+}
+::placeholder{
+    color: var(--color-placeholder);
+}
+.input-text-area:focus{
+    outline: none;
+}
+
+.input-guidance{
+    display: flex;
+    align-items: center;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.input-guidance img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.input-guidance h6{
+    font-size: 0.4rem;
+}
+
+.input-buttons{
+    display: flex;
+    margin-top: 18px;   
+}
+
+button{
+    font-family: "Inter", sans-serif;
+    border: 1px solid var(--color-border);  
+    border-radius: 24px;
+    width: 100%;    
+    height: 1.8rem;    
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+button:hover{
+    transition: all 0.3s ease-in-out;
+    scale: 0.85;
+}
+
+.encrypt-button{
+    background-color: var(--color-primary);
+    color: white;   
+}
+.encrypt-button:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+.decrypt-button{
+    background-color: var(--color-secondary);   
+    color: var(--color-primary);
+    margin-left: 30px;
+}
+
+.text-output-section{
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: white; 
+    border-radius: 24px;   
+    text-align: center;    
+    margin-bottom: 0
+   }
+
+.output-text-area{
+    background-image: url("../assets/buscando.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    border: none;
+    border-radius: 24px;
+    color: var(--color-primary);
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    height: 9.5rem;
+    box-sizing: border-box; 
+}
+.output-text-area:focus{
+    outline: none;
+}
+
+.output-message h4{
+    font-weight:700;
+    font-size: 24px;
+    color: var(--color-text);
+}
+
+.output-message h5{
+    font-size: 16px;
+    color: var(--color-text-muted);
+}
+
+.output-buttons{
+    display: flex;
+    justify-content: center;
+
+}
+
+.copy-button{
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    color: var(--color-primary);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 60px;
+    display: none;
+    
+}
+.copy-button:hover {
+    background-color: var(--color-primary-hover);
+    color: white;
+  }
+
+.footer-section {
+    width: 100%;
+    background-color: var(--color-background);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 5px 0; 
+    font-size: 18px;
+    border-top: 1px solid var(--color-border);
+    margin-top: 1.5rem; 
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 15px; 
+}
+
+.footer-linkedin {
+    font-size: 16px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-linkedin:hover {
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+}
+
+
+  @media (max-width: 1100px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-input-section, .text-output-section {
+        max-width: 90%; 
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .input-text-area {
+        min-height: 300px;
+        padding: 10px;
+    }
+
+    .output-text-area {
+        height: 200px;
+        padding: 10px;       
+    }
+
+    .input-buttons {
+        flex-direction: row; 
+        gap: 10px; 
+        justify-content: center; 
+    }
+
+    .encrypt-button, .decrypt-button {
+        margin: 0;
+        width: 40%; 
+    }
+
+    .output-buttons .copy-button {
+        margin-top: 20px;
+        width: 70%;
+    }
+}
+
+
+.footer-section {
+    padding: 8px 0;
+    font-size: 7px; 
+}
+
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 0 10px; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    
+    .text-input-section, .text-output-section {
+        max-width: 100%; 
+        margin: 20px auto;
+        padding: 15px; 
+    }
+
+    
+    .input-text-area {
+        min-height: 250px; 
+        padding: 10px;
+    }
+
+    
+    .output-text-area {
+        height: 150px; 
+        padding: 10px;
+    }
+
+    
+    .input-buttons {
+        flex-direction: column; 
+        gap: 10px; 
+        width: 100%; 
+    }
+
+    .encrypt-button, .decrypt-button {
+        margin: 0; 
+        width: 100%; 
+    }
+
+    
+    .output-buttons .copy-button {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+
+.footer-section {
+    padding: 6px 0;
+    font-size: 6px; 
+}
